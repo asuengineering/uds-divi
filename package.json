@@ -23,6 +23,7 @@
   "dependencies": {},
   "devDependencies": {
     "@asu-design-system/design-tokens": "dev",
+    "@asu-design-system/components-library": "dev",
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "autoprefixer": "^9.8.6",
