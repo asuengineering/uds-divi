@@ -6,7 +6,7 @@
 	"minimum-stability": "stable",
 	"keywords": [
 		"wordpress",
-		"theme",
+		"theme"
 	],
 	"homepage": "https://github.com/asuengineering/uds-divi",
 	"require": {

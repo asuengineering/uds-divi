@@ -21,3 +21,14 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+# Misc files that occur regularly.
+.DS_Store
+Thumbs.db
+
+# Composer
+/vendor/
+
+# Coding standards
+.phpcs.xml
+.phpcs-cache
