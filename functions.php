@@ -7,22 +7,45 @@
  * @package uds-divi
  */
 
-/**
- * Enqueue assets.
- **/
-function uds_divi_enqueue_scripts() {
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
-	$the_theme     = wp_get_theme();
-	$theme_version = $the_theme->get( 'Version' );
+$uds_wp_includes = array(
+	'/enqueue.php',                       		 // Enqueues the correct child theme files.
+	'/setup.php',								 // Theme setup options.
+	'/customizer.php',                           // Customizer additions.
+	'/render-partials.php',                      // Rendering methods for certain customizer-controlled items.
+	'/wp-custom-menu.php',                       // Load custom menu builder functions.
+);
 
-	$css_version = $theme_version . '.' . filemtime( get_template_directory_uri() . '/style.css' );
-	$child_css_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . '/style.css' );
-
-	wp_register_style( 'divi-style', get_template_directory_uri() . '/style.css', array(), $css_version );
-	wp_register_style( 'uds-divi-style', get_stylesheet_directory_uri() . '/css/uds-divi.css', array( 'divi-style' ), $child_css_version );
-
-	wp_enqueue_style( 'divi-style' );
-	wp_enqueue_style( 'uds-divi-style' );
-
+foreach ( $uds_wp_includes as $file ) {
+	require_once get_stylesheet_directory() . '/inc' . $file;
 }
-add_action( 'wp_enqueue_scripts', 'uds_divi_enqueue_scripts' );
+
+
+// Misc functions. These need a home eventually.
+if ( ! function_exists( 'uds_wp_body_attributes' ) ) {
+	/**
+	 * Displays the attributes for the body element.
+	 */
+	function uds_wp_body_attributes() {
+		/**
+		 * Filters the body attributes.
+		 *
+		 * @param array $atts An associative array of attributes.
+		 */
+		$atts = array_unique( apply_filters( 'uds_wp_body_attributes', $atts = array() ) );
+		if ( ! is_array( $atts ) || empty( $atts ) ) {
+			return;
+		}
+		$attributes = '';
+		foreach ( $atts as $name => $value ) {
+			if ( $value ) {
+				$attributes .= sanitize_key( $name ) . '="' . esc_attr( $value ) . '" ';
+			} else {
+				$attributes .= sanitize_key( $name ) . ' ';
+			}
+		}
+		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+}
