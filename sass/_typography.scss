@@ -1,0 +1,146 @@
+// Typography
+// Font, line-height, and color for body text, headings, and more.
+
+// ASU Brand Standard Fonts
+// Reference: https://brandguide.asu.edu/Elements-of-the-brand/Fonts
+
+
+/* -------------------------------------
+From bootstrap4-theme/src/scss/variables/_typography.scss
+--------------------------------------- */
+$font-family-sans-serif: Arial,
+Helvetica,
+'Nimbus Sans L',
+'Liberation Sans',
+FreeSans,
+sans-serif;
+
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-lighter: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+
+// Body Font Color
+$body-font-color: $uds-color-base-gray-7;
+
+body {
+	font-family: $font-family-base;
+	font-weight: $font-weight-normal;
+	color: $body-font-color;
+	font-size: 16px;
+}
+
+// Text formatting
+.text-white {
+	color: $uds-color-base-white;
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-capitalize {
+	text-transform: capitalize !important;
+}
+
+// No underlines allowed.
+u,
+ins {
+	text-decoration-line: none;
+	font-style: italic;
+}
+
+// No underlines allowed.
+abbr {
+	text-decoration-line: none !important;
+	text-decoration-style: none !important;
+	text-decoration-color: initial !important;
+}
+
+/* -------------------------------------
+From bootstrap4-theme/src/scss/extends/_paragraphs.scss
+--------------------------------------- */
+p {
+	line-height: calc(100% + 8px);
+	letter-spacing: 0;
+	max-width: 75ch;
+}
+
+/* -------------------------------------
+From bootstrap4-theme/src/scss/extends/_headings.scss
+--------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 700;
+	text-align: left;
+	opacity: 1;
+	margin: $uds-size-spacing-2 0;
+	line-height: $uds-size-spacing-3;
+}
+
+h1 {
+	font-size: 4rem;
+	letter-spacing: -0.035em;
+
+	&.article {
+		font-size: 3rem;
+	}
+
+	@media (max-width: 577px) {
+		font-size: 2.25rem;
+	}
+}
+
+h2 {
+	font-size: 2.5rem;
+	letter-spacing:-0.035em;
+
+	@media (max-width: 577px) {
+		font-size: 2rem;
+	}
+}
+
+h3 {
+	font-size: 1.5rem;
+	letter-spacing:-0.035em;
+}
+
+h4 {
+	font-size: 1.25rem;
+	letter-spacing:-0.025em;
+}
+
+h5 {
+	font-size: 1rem;
+	letter-spacing:-0.015em;
+}
+
+h1 span.highlight,
+h2 span.highlight,
+h3 span.highlight,
+h4 span.highlight {
+	&-gold {
+		box-shadow: -.15em 0 0 $uds-color-base-gray-7, .15em 0 0 $uds-color-base-gray-7;
+		background: $uds-color-base-gray-7;
+		color: $uds-color-base-gold;
+	}
+
+	&-black {
+		box-shadow: -.15em 0 0 $uds-color-base-gray-7, .15em 0 0 $uds-color-base-gray-7;
+		background: $uds-color-base-gray-7;
+		color: $uds-color-base-white;
+	}
+
+	&-white {
+		box-shadow: -.15em 0 0 $uds-color-base-white, .15em 0 0 $uds-color-base-white;
+		background: $uds-color-base-white;
+		color: $uds-color-base-gray-7;
+	}
+}
