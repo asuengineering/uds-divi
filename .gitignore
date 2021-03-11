@@ -1,21 +1,18 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
-
-# ignore these plugins
-wp-content/plugins/hello.php
-
-# ignore specific themes
-wp-content/themes/twenty*/
-
 # ignore node dependency directories
-node_modules/
+# exception: BS4 theme from ASU
+node_modules/*
+!node_modules/@asu-design-system/
+
+node_modules/@asu-design-system/*
+!node_modules/@asu-design-system/bootstrap4-theme/
+!node_modules/@asu-design-system/design-tokens/
+
+node_modules/@asu-design-system/bootstrap4-theme/*
+!node_modules/@asu-design-system/bootstrap4-theme/src
+
+node_modules/@asu-design-system/design-tokens/*
+!node_modules/@asu-design-system/design-tokens/build
+
 
 # ignore log files and databases
 *.log
