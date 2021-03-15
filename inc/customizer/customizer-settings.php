@@ -596,71 +596,6 @@ if ( ! function_exists( 'uds_wp_register_theme_customizer_settings' ) ) {
 		);
 
 		/***********************************************************************
-		 * 404 Image Section
-		 *
-		 * Contains: button to show 404 page, 404 image
-		 */
-
-		$wp_customize->add_section(
-			'uds_wp_theme_section_404',
-			array(
-				'title'      => __( '404 Image', 'uds-wordpress-theme' ),
-				'priority'   => 30,
-			)
-		);
-
-		$wp_customize->add_setting(
-			'image_404',
-			array(
-				'default'           => '',
-				'capability'        => 'edit_theme_options',
-				'type'              => 'theme_mod',
-				'sanitize_callback' => 'uds_wp_sanitize_nothing',
-				'transport'         => 'refresh',
-			)
-		);
-
-		/**
-		 * This is a "setting-less" control, and only shows up if you are NOT
-		 * looking at the 404 page in the customizer (see the 'active_callback').
-		 * It loads an invalid URL in the customizer iFrame so you can see what
-		 * you are editing.
-		 */
-		$wp_customize->add_control(
-			'not_found_link',
-			array(
-				'section'  => 'uds_wp_theme_section_404',
-				'label'             => __( 'Show 404 Page', 'uds-wordpress-theme' ),
-				'description'       => __( 'To see your results as you customize, click the button below to load the 404 page now.', 'uds-wordpress-theme' ),
-				'settings' => array(),
-				'type' => 'button',
-				'priority' => 1,
-				'input_attrs'  => array(
-					'value' => __( 'Load 404 Page', 'uds-wordpress-theme' ),
-					'class' => 'button button-secondary',
-					'onclick' => 'wp.customize.previewer.previewUrl.set( "/oranges" );',
-				),
-				'active_callback' => 'show_404_callback',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control(
-				$wp_customize,
-				'image_404',
-				array(
-					'label'      => __( '404 Image', 'uds-wordpress-theme' ),
-					'description'       => __(
-						'Resize and crop your desired image to approximately 1200px x 500px',
-						'uds-wordpress-theme'
-					),
-					'section'    => 'uds_wp_theme_section_404',
-					'settings'   => 'image_404',
-				)
-			)
-		);
-
-		/***********************************************************************
 		 * ASU Analytics Section
 		 *
 		 * Contains: ASU Hub analytics, Google Analytics, Google Tag Manager,
@@ -795,16 +730,6 @@ if ( ! function_exists( 'uds_wp_register_theme_customizer_settings' ) ) {
 	}
 } // End of if function_exists( 'uds_wp_register_theme_customizer_settings' ).
 add_action( 'customize_register', 'uds_wp_register_theme_customizer_settings' );
-
-/**
- * Callback for our 'show 404 page' button. For backwards compatability, and to
- * make PHPCS happy, we are not using inline anonymous functions. This function
- * returns TRUE if we are NOT viewing the 404 page. When that is the case, we
- * draw the button to show the 404 page.
- */
-function show_404_callback() {
-	return ! is_404();
-}
 
 /**
  * Show or hide the custom logo options (the drop-down and the URL field)

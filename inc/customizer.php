@@ -15,6 +15,7 @@ $uds_wp_includes = array(
 	'/customizer-post-message-support.php', // Add postMessage support for site title and description in the Theme Customizer.
 	'/customizer-endorsed-unit-logos.php',  // Load endorsed unit logos for Customizer.
 	'/customizer-settings.php',             // Load custom settings and sections in Customizer.
+	'/customizer-remove-divi.php',			// Removes no longer needed Divi sections from the customizer.
 );
 
 foreach ( $uds_wp_includes as $file ) {

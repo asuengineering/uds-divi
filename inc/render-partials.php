@@ -196,7 +196,7 @@ function uds_wp_render_footer_logo() {
 			echo wp_kses(
 				sprintf(
 					$logo_template,
-					get_template_directory_uri() . '/img/endorsed-logo/' . $filename,
+					get_stylesheet_directory_uri() . '/img/endorsed-logo/' . $filename,
 					get_bloginfo( 'name' ) . ' Logo',
 					home_url( '/' )
 				),
