@@ -21,6 +21,12 @@ This child theme is also featured in a distributed WordPress installation within
 
 ## Release Notes
 
+### Version 0.2
+
+- Enable analytics controls within the customizer to function properly.
+- Remove UDS-WordPress 404 error page controls from customizer.
+- Fix paths for endorsed logos within the footer.
+
 ### Version 0.1
 
 - Initial release of the child theme.
