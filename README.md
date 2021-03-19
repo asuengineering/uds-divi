@@ -21,6 +21,10 @@ This child theme is also featured in a distributed WordPress installation within
 
 ## Release Notes
 
+### Version 0.3
+
+- Addresses a JS loading error due to an incorrectly named file in the enqueue statement.
+
 ### Version 0.2
 
 - Enable analytics controls within the customizer to function properly.

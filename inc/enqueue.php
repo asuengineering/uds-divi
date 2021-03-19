@@ -26,7 +26,7 @@ function uds_divi_enqueue_scripts() {
 	wp_script_add_data( 'font-awesome-kit', 'crossorigin', 'anonymous' );
 
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/node_modules/@asu-design-system/bootstrap4-theme/dist/js/bootstrap.min.js', array('jquery'), null, false);
+	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js', array('jquery'), null, false);
 	wp_enqueue_script( 'asu-header', get_stylesheet_directory_uri() . '/node_modules/@asu-design-system/bootstrap4-theme/src/js/global-header.js', array('jquery', 'bootstrap'), null, false);
 }
 add_action( 'wp_enqueue_scripts', 'uds_divi_enqueue_scripts' );
