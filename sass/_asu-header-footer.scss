@@ -7,25 +7,25 @@
 #asu-footer {
 
 	// Apply variable overrides before importing Bootstrap’s Sass files
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/colors';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/alerts';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/banners';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/spacing';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/typography';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/buttons';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/blockquotes';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/cards';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/icons';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/images';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/headings';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/list';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/heroes';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/testimonials';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/paragraphs';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/pager';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/breadcrumb';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/dividers';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/variables/dropdown';
+	@import '../src/sass/uds-bootstrap/variables/colors';
+	// @import '../src/sass/uds-bootstrap/variables/alerts';
+	// @import '../src/sass/uds-bootstrap/variables/banners';
+	@import '../src/sass/uds-bootstrap/variables/spacing';
+	// @import '../src/sass/uds-bootstrap/variables/typography';
+	@import '../src/sass/uds-bootstrap/variables/buttons';
+	// @import '../src/sass/uds-bootstrap/variables/blockquotes';
+	// @import '../src/sass/uds-bootstrap/variables/cards';
+	@import '../src/sass/uds-bootstrap/variables/icons';
+	// @import '../src/sass/uds-bootstrap/variables/images';
+	// @import '../src/sass/uds-bootstrap/variables/headings';
+	// @import '../src/sass/uds-bootstrap/variables/list';
+	// @import '../src/sass/uds-bootstrap/variables/heroes';
+	// @import '../src/sass/uds-bootstrap/variables/testimonials';
+	// @import '../src/sass/uds-bootstrap/variables/paragraphs';
+	// @import '../src/sass/uds-bootstrap/variables/pager';
+	// @import '../src/sass/uds-bootstrap/variables/breadcrumb';
+	@import '../src/sass/uds-bootstrap/variables/dividers';
+	@import '../src/sass/uds-bootstrap/variables/dropdown';
 
 	//== Bootstrap Required
 	@import '../node_modules/bootstrap/scss/functions';
@@ -107,24 +107,24 @@
 	// @import '../node_modules/bootstrap/scss/print';
 
 	// css Bootstrap doesn't have variables for
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/misc';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/alerts';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/banners';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/buttons';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/badges';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/icons';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/images';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/cards';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/list';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/headings';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/dividers';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/pager';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/heroes';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/testimonials';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/breadcrumb';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/sidebar';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/globalfooter';
-	// @import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/blockquotes';
-	@import '../node_modules/@asu-design-system/bootstrap4-theme/src/scss/extends/global-header';
+	// @import '../src/sass/uds-bootstrap/extends/misc';
+	// @import '../src/sass/uds-bootstrap/extends/alerts';
+	// @import '../src/sass/uds-bootstrap/extends/banners';
+	@import '../src/sass/uds-bootstrap/extends/buttons';
+	// @import '../src/sass/uds-bootstrap/extends/badges';
+	// @import '../src/sass/uds-bootstrap/extends/icons';
+	// @import '../src/sass/uds-bootstrap/extends/images';
+	@import '../src/sass/uds-bootstrap/extends/cards';
+	// @import '../src/sass/uds-bootstrap/extends/list';
+	// @import '../src/sass/uds-bootstrap/extends/headings';
+	// @import '../src/sass/uds-bootstrap/extends/dividers';
+	// @import '../src/sass/uds-bootstrap/extends/pager';
+	// @import '../src/sass/uds-bootstrap/extends/heroes';
+	// @import '../src/sass/uds-bootstrap/extends/testimonials';
+	// @import '../src/sass/uds-bootstrap/extends/breadcrumb';
+	// @import '../src/sass/uds-bootstrap/extends/sidebar';
+	@import '../src/sass/uds-bootstrap/extends/globalfooter';
+	// @import '../src/sass/uds-bootstrap/extends/blockquotes';
+	@import '../src/sass/uds-bootstrap/extends/global-header';
 
 }

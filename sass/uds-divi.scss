@@ -1,9 +1,8 @@
 // Design tokens from ASU Boostrap library
-@import "../node_modules/@asu-design-system/design-tokens/build/scss/_variables";
-
+@import "../src/sass/uds-bootstrap/design-tokens/_variables";
 
 // Override image base path for theme css
-$image-assets-path: '/wp-content/themes/uds-divi/img';
+$image-assets-path: '/wp-content/themes/uds-divi/src/img/asu-unity';
 
 @import "_media-queries";			// Media queries that model those found in Bootstrap 4
 @import "_typography";				// Typography reset based on what is happening within UDS-Bootstrap.
