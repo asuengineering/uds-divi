@@ -225,7 +225,7 @@ gulp.task("copy-assets", function (done) {
 	// Copy all Bootstrap SASS files
 	gulp.src(
 		paths.node + "/@asu-design-system/bootstrap4-theme/src/scss/**/*"
-	).pipe(gulp.dest(paths.dev + "/scss/uds-bootstrap"));
+	).pipe(gulp.dest(paths.dev + "/sass/uds-bootstrap"));
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 

@@ -5,6 +5,6 @@
 // Override image base path for theme css
 $image-assets-path: '/wp-content/themes/uds-divi/img';
 
-@import "_media-queries";		// Media queries that model those found in Bootstrap 4
-@import "_typography";			// Typography reset based on what is happening within UDS-Bootstrap.
-@import "_asu-header-footer";			// All styles needed for the ASU header and footer, wrapped in CSS name spaces.
+@import "_media-queries";			// Media queries that model those found in Bootstrap 4
+@import "_typography";				// Typography reset based on what is happening within UDS-Bootstrap.
+@import "_asu-header-footer";		// All styles needed for the ASU header and footer, wrapped in CSS name spaces.
