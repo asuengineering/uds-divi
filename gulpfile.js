@@ -217,15 +217,20 @@ gulp.task("copy-assets", function (done) {
 		)
 		.pipe(gulp.dest(paths.dev + "/js/bootstrap4"));
 
-	// Copy all Bootstrap image files
+	// Copy all UDS Bootstrap image files
 	gulp.src(
 		paths.node + "/@asu-design-system/bootstrap4-theme/dist/img/**/*"
 	).pipe(gulp.dest(paths.dev + "/img/asu-unity"));
 
-	// Copy all Bootstrap SASS files
+	// Copy all UDS Bootstrap SASS files
 	gulp.src(
 		paths.node + "/@asu-design-system/bootstrap4-theme/src/scss/**/*"
 	).pipe(gulp.dest(paths.dev + "/sass/uds-bootstrap"));
+
+	// Copy all "vanilla" Bootstrap SASS files. Needed to compile SASS "on the fly."
+	gulp.src(paths.node + "/bootstrap/scss/**/*").pipe(
+		gulp.dest(paths.dev + "/sass/bootstrap4")
+	);
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 
