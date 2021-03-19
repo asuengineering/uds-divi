@@ -1,18 +1,5 @@
 # ignore node dependency directories
-# exception: BS4 theme from ASU
-node_modules/*
-!node_modules/@asu-design-system/
-
-node_modules/@asu-design-system/*
-!node_modules/@asu-design-system/bootstrap4-theme/
-!node_modules/@asu-design-system/design-tokens/
-
-node_modules/@asu-design-system/bootstrap4-theme/*
-!node_modules/@asu-design-system/bootstrap4-theme/src
-
-node_modules/@asu-design-system/design-tokens/*
-!node_modules/@asu-design-system/design-tokens/build
-
+node_modules/
 
 # ignore log files and databases
 *.log
