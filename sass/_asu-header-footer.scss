@@ -28,9 +28,9 @@
 	@import '../src/sass/uds-bootstrap/variables/dropdown';
 
 	//== Bootstrap Required
-	@import '../node_modules/bootstrap/scss/functions';
-	@import '../node_modules/bootstrap/scss/variables';
-	@import '../node_modules/bootstrap/scss/mixins';
+	@import '../src/sass/bootstrap4/functions';
+	@import '../src/sass/bootstrap4/variables';
+	@import '../src/sass/bootstrap4/mixins';
 
 	// To remove values from Bootstrap maps, these must occur between Required and Optional imports.
 
