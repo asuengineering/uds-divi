@@ -222,13 +222,12 @@ gulp.task("copy-assets", function (done) {
 		paths.node + "/@asu-design-system/bootstrap4-theme/dist/img/**/*"
 	).pipe(gulp.dest(paths.dev + "/img/asu-unity"));
 
-	////////////////// End Bootstrap 4 Assets /////////////////////////
-
-	// Copy Font Awesome JS (Auto-replaces FA <i> & <span> tags with SVGs)
+	// Copy all Bootstrap SASS files
 	gulp.src(
-		paths.node +
-			"/@asu-design-system/bootstrap4-theme/dist/assets/fontawesome/js/*"
-	).pipe(gulp.dest(paths.js + "/fontawesome"));
+		paths.node + "/@asu-design-system/bootstrap4-theme/src/scss/**/*"
+	).pipe(gulp.dest(paths.dev + "/scss/uds-bootstrap"));
+
+	////////////////// End Bootstrap 4 Assets /////////////////////////
 
 	done();
 });
