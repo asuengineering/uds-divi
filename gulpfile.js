@@ -210,12 +210,17 @@ gulp.task("clean-source", function () {
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task("copy-assets", function (done) {
 	////////////////// All Bootstrap 4 Assets /////////////////////////
-	// Copy all JS files
+	// Copy all "vanilla" Boostrap JS files
 	var stream = gulp
 		.src(
 			paths.node + "/@asu-design-system/bootstrap4-theme/dist/js/**/*.js"
 		)
 		.pipe(gulp.dest(paths.dev + "/js/bootstrap4"));
+
+	// Copy UDS Bootstrap global header JS file. (And others.)
+	gulp.src(
+		paths.node + "/@asu-design-system/bootstrap4-theme/src/js/**/*"
+	).pipe(gulp.dest(paths.dev + "/js/uds-bootstrap"));
 
 	// Copy all UDS Bootstrap image files
 	gulp.src(
