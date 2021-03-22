@@ -21,6 +21,10 @@ This child theme is also featured in a distributed WordPress installation within
 
 ## Release Notes
 
+### Version 0.4
+
+- Refactor image sources and `gulpfile.json` to copy assets from `node_modules` correctly. Result is a much smaller theme package.
+
 ### Version 0.3
 
 - Addresses a JS loading error due to an incorrectly named file in the enqueue statement.
