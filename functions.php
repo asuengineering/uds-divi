@@ -13,6 +13,7 @@ defined( 'ABSPATH' ) || exit;
 $uds_wp_includes = array(
 	'/enqueue.php',                       		 // Enqueues the correct child theme files.
 	'/setup.php',								 // Theme setup options.
+	'/class-wp-social-media-walker.php',         // Load custom WordPress nav walker for footer Social Media menu wdiget.
 	'/customizer.php',                           // Customizer additions.
 	'/render-partials.php',                      // Rendering methods for certain customizer-controlled items.
 	'/wp-custom-menu.php',                       // Load custom menu builder functions.
